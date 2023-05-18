@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Here you can find your favorite movie, watch the trailer. Also, the functionality allows you to put a queue of films for viewing and a list of watched ones."
+    />
+    <title>Filmoteka</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <link disabled rel="stylesheet" href="./sass/dark-theme.css" data-theme />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <include src="./partials/header.html"></include>
+      <!-- <include src="./partials/loginform.html"></include> -->
+    </header>
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <include src="./partials/movie-carousel.html"></include>
+        <div class="gallery-wrap">
+          <h2 class="visually-hidden">Best films of the day</h2>
+          <include src="./partials/library.html"></include>
+          <ul class="gallery"></ul>
+        </div>
+        <div id="pagination" class="tui-pagination"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-text copyright">
+        &copy; 2023 | All Rights Reserved |&nbsp;
+      </div>
+      <div class="footer-text">
+        Developed with
+        <div class="lds-heart"><div></div></div>
+        by&nbsp;
+        <button class="team-modal js-team-modal" type="button">
+          GoIT Students
+        </button>
+      </div>
+    </footer>
+
+    <div class="btn-to-top">
+      <svg class="icon-to-top">
+        <use href="./images/icons.svg#icon-circle-up"></use>
+      </svg>
+    </div>
+    <include src="./partials/modal.html"></include>
+    <audio id="audio-play" src="./sound/audio-play.mp3" preload="auto"></audio>
+  </body>
+</html>
